@@ -47,4 +47,9 @@ public class CustomerTest{
     //withdrawal would exceed balance (i.e. 1000)
     assertEquals(50, customer.getAccount().getBalance());
   }
+
+  @Test
+  public void canRetrieveCorrectPin(){
+    assertEquals(1234, customer.getPin());
+  }
 }

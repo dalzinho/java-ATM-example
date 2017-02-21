@@ -45,5 +45,13 @@ public void fillUp(){
   this.cashReserve = 1000;
 }
 
+// public void newSession(customer){
+//   console.display("Please enter your PIN:");    
+//   if (console.getPIN(); == customer.getPIN()){
+    
+//   }
+
+// }
+
 
 }
