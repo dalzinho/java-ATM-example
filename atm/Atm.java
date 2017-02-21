@@ -1,3 +1,5 @@
+package atm;
+
 public class Atm{
 
   private int cashReserve;
@@ -14,5 +16,14 @@ public class Atm{
     return this.cashReserve;
   }
 
-  
+  public int giveCash(int amount){
+    this.cashReserve -= amount;
+    return amount;
+  }
+
+  public void fillUp(){
+    this.cashReserve = 1000;
+  }
+
+
 }
