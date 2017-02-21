@@ -20,7 +20,7 @@ public class Customer{
 
   public String withdrawCash(int amount, Atm atm){
     
-    String operationState;
+    String operationOutcome;
 
     if(getAccount().hasFunds(amount)){
 
@@ -29,19 +29,19 @@ public class Customer{
       if(returnedCash > 0){
         wallet += atm.giveCash(amount);
         this.account.deduct(amount);
-        operationComplete = true;
+        operationOutcome = "Please wait while your money is being counted.";
       }
       else {
-        operationComplete = false;
+        operationOutcome = "Unable to complete this transaction";
       }
     
-    else{
-      operationComplete = false;
-    }
    
     //else add console message 
 }  
-  return operationComplete;
+else{
+  operationOutcome = "Insufficient funds for this transaction.";
+}
+  return operationOutcome;
 }
 
 
