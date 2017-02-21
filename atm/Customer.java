@@ -17,8 +17,11 @@ public class Customer{
   }
 
   public void withdrawCash(int amount, Atm atm){
-    wallet += atm.giveCash(amount);
-    this.account.deduct(amount);
+    if(getAccount().hasFunds(amount)){
+      wallet += atm.giveCash(amount);
+      this.account.deduct(amount);
+    }
+    //else add console message 
   }
 
   public Account getAccount(){

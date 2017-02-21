@@ -35,4 +35,16 @@ public class CustomerTest{
     assertEquals(900, atm.getcashReserve()); 
     assertEquals(100, customer.getCashInWallet());
   }
+
+  @Test
+  public void customerCannotExceedAccountBalance(){
+    customer.withdrawCash(250, atm);
+    customer.withdrawCash(250, atm);
+    customer.withdrawCash(250, atm);
+    customer.withdrawCash(200, atm);
+    //withdrawals total 950
+    customer.withdrawCash(100, atm);
+    //withdrawal would exceed balance (i.e. 1000)
+    assertEquals(50, customer.getAccount().getBalance());
+  }
 }
