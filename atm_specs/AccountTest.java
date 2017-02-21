@@ -26,4 +26,10 @@ public class AccountTest{
     account.deduct(100);
     assertEquals(900, account.getBalance());
   }
+
+  @Test
+  public void customerHasFunds(){
+    assertEquals(true, account.hasFunds(1000));
+    assertEquals(false, account.hasFunds(1010));
+  }
 }

@@ -17,4 +17,8 @@ public class Account{
     this.balance -= amount;
   }
 
+  public boolean hasFunds(int amount){
+    return amount <= this.balance;
+  }
+
 }
