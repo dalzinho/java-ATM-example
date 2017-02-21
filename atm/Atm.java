@@ -45,17 +45,27 @@ public void fillUp(){
   this.cashReserve = 1000;
 }
 
-public boolean checkPin(Customer customer, int pin){
-  return customer.getPin() == pin;
+public int requestPin(Console console){
+  console.display("Please enter your PIN:");
+  return console.getPIN();
+}
+
+public boolean checkPin(Customer customer, int enteredPin){
+  return customer.getPin() == enteredPin;
 }
 
 public void newSession(Customer customer, Console console){
-  console.display("Please enter your PIN:");    
-  if (console.getPIN() == customer.getPin()){
-    console.display("PIN Correct!");
+  boolean pinCorrect = false;
+
+  while(pinCorrect == false){
+    int enteredPin = requestPin(console);
+    if(checkPin(customer, enteredPin)){
+      pinCorrect = true;
+      console.display("Correct Pin!");
+    }
   }
+}
 
 }
 
 
-}
