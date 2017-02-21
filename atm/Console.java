@@ -16,6 +16,10 @@ public class Console {
   public int getPIN(){
     sc = new Scanner(System.in);
     String stringPin = sc.nextLine();
+
+    md = MessageDigest.getInstance("MD5");
+      
+    //these lines might need to be commented out while attempting to create hash from the input
     int intPin = Integer.parseInt(stringPin);
     return intPin;
   }
@@ -24,9 +28,6 @@ public class Console {
     sc = new Scanner(System.in);
     String stringCashRequest = sc.nextLine();
     
-    md = MessageDigest.getInstance("MD5");
-      
-    //these lines commented out while attempting to create hash from the input
 
     int intCashRequest = Integer.parseInt(stringCashRequest);
     return intCashRequest;
