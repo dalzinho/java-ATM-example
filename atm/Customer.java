@@ -18,11 +18,17 @@ public class Customer{
     return this.wallet;
   }
 
-  public void withdrawCash(int amount, Atm atm){
+  public boolean withdrawCash(int amount, Atm atm){
+    boolean operationComplete;
     if(getAccount().hasFunds(amount)){
       wallet += atm.giveCash(amount);
       this.account.deduct(amount);
+      operationComplete = true;
     }
+    else{
+      operationComplete = false;
+    }
+    return operationComplete;
     //else add console message 
   }
 

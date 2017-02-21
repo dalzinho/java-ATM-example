@@ -72,6 +72,7 @@ public void newSession(Customer customer, Console console){
 
  int requestedAmount = requestCash(console);
  customer.withdrawCash(requestedAmount, this);
+ 
 
 }
 
