@@ -4,16 +4,12 @@ public class Customer{
 
   private int wallet;
   private String name;
-  private int balance;
+  private Account account;
 
-  public Customer(String name, int balance){
+  public Customer(String name, Account account){
     this.wallet = 0;
     this.name = name;
-    this.balance = balance;
-  }
-
-  public int getBalance(){
-    return this.balance;
+    this.account = account;
   }
 
   public int getCashInWallet(){
@@ -22,7 +18,7 @@ public class Customer{
 
   public void withdrawCash(int amount, Atm atm){
     wallet += atm.giveCash(amount);
-    balance -= amount;
+    // balance -= amount;
   }
 
 }
