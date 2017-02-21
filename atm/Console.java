@@ -17,8 +17,12 @@ public class Console {
     sc = new Scanner(System.in);
     String stringPin = sc.nextLine();
 
-    md = MessageDigest.getInstance("MD5");
-      
+    try {
+    md = MessageDigest.getInstance("SHA-256");
+      }
+      catch(NoSuchAlgorithmException ex){
+        System.out.println("HVISHJSHFJKHFJK");
+      }
     //these lines might need to be commented out while attempting to create hash from the input
     int intPin = Integer.parseInt(stringPin);
     return intPin;
