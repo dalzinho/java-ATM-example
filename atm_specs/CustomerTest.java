@@ -16,10 +16,7 @@ public class CustomerTest{
     customer = new Customer ("Slartibartfast", account);
   }
 
-  // @Test
-  // public void canGetBalance(){
-  //   assertEquals(300, customer.getBalance());
-  // }
+
 
   @Test
   public void canGetWalletCash(){
@@ -27,10 +24,15 @@ public class CustomerTest{
   }
 
   @Test
-  public void withdrawCashAdjustsBalance(){
-    customer.withdrawCash(100, atm);
-    // assertEquals(200, customer.getBalance());  
-    assertEquals(900, atm.getcashReserve()); 
-    assertEquals(100, customer.getCashInWallet());
+  public void canGetAccount(){
+    assertEquals(1000, customer.getAccount().getBalance());
   }
+
+  // @Test
+  // public void withdrawCashAdjustsBalance(){
+  //   customer.withdrawCash(100, atm);
+  //   assertEquals(900, customer.account.getBalance());
+  //   assertEquals(900, atm.getcashReserve()); 
+  //   assertEquals(100, customer.getCashInWallet());
+  // }
 }

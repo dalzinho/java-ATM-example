@@ -18,7 +18,13 @@ public class Customer{
 
   public void withdrawCash(int amount, Atm atm){
     wallet += atm.giveCash(amount);
-    // balance -= amount;
+    this.account.deduct(amount);
   }
+
+  public Account getAccount(){
+    return this.account;
+  }
+
+
 
 }
