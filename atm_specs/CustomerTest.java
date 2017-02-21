@@ -28,11 +28,11 @@ public class CustomerTest{
     assertEquals(1000, customer.getAccount().getBalance());
   }
 
-  // @Test
-  // public void withdrawCashAdjustsBalance(){
-  //   customer.withdrawCash(100, atm);
-  //   assertEquals(900, customer.account.getBalance());
-  //   assertEquals(900, atm.getcashReserve()); 
-  //   assertEquals(100, customer.getCashInWallet());
-  // }
+  @Test
+  public void withdrawCashAdjustsBalance(){
+    customer.withdrawCash(100, atm);
+    assertEquals(900, customer.getAccount().getBalance());
+    assertEquals(900, atm.getcashReserve()); 
+    assertEquals(100, customer.getCashInWallet());
+  }
 }
