@@ -16,4 +16,8 @@ public class Customer{
     return this.balance;
   }
 
+  public int getCashInWallet(){
+    return this.wallet;
+  }
+
 }
