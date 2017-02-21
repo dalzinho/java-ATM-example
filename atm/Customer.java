@@ -5,13 +5,13 @@ public class Customer{
   private int wallet;
   private String name;
   private Account account;
-  private int pin;
+  private String pin;
 
   public Customer(String name, Account account){
     this.wallet = 0;
     this.name = name;
     this.account = account;
-    this.pin = 1234;
+    this.pin = "A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=";
   }
 
   public int getCashInWallet(){
@@ -49,7 +49,7 @@ else{
     return this.account;
   }
 
-  public int getPin(){
+  public String getPin(){
     return this.pin;
   }
 

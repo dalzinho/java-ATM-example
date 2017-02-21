@@ -46,12 +46,12 @@ public void fillUp(){
   this.cashReserve = 1000;
 }
 
-public int requestPin(Console console){
+public String requestPin(Console console){
   console.display("Please enter your PIN:");
   return console.getPIN();
 }
 
-public boolean checkPin(Customer customer, int enteredPin){
+public boolean checkPin(Customer customer, String enteredPin){
   return customer.getPin() == enteredPin;
 }
 
@@ -64,7 +64,7 @@ public void newSession(Customer customer, Console console){
   boolean pinCorrect = false;
 
   while(pinCorrect == false){
-    int enteredPin = requestPin(console);
+    String enteredPin = requestPin(console);
     if(checkPin(customer, enteredPin)){
       pinCorrect = true;
       console.display("Correct Pin!");
