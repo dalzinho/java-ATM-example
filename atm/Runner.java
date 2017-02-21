@@ -9,6 +9,6 @@ public class Runner{
  
 
   public static void main(String[] args) {
-    // atm.newSession(customer);
+    atm.newSession(customer, console);
   }
 }

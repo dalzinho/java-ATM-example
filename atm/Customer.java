@@ -30,6 +30,9 @@ public class Customer{
     return this.account;
   }
 
+  public int getPin(){
+    return this.pin;
+  }
 
 
 }

@@ -5,10 +5,15 @@ import atm.*;
 public class AtmTest{
 
   Atm atm;
+  Account account;
+  Customer customer;
 
  @Before
   public void before(){
     atm = new Atm("Sauchiehall St.");
+    account = new Account(1000);
+    customer = new Customer("Slartibartfast", account);
+
   }
 
   @Test
@@ -52,5 +57,10 @@ public class AtmTest{
 
     assertEquals(250, atm.giveCash(250));
     assertEquals(0, atm.giveCash(260));
+  }
+
+  @Test
+  public void checkPinReturnsValidResponse(){
+    assertEquals(true, atm.checkPin(customer, 1234));
   }
 }

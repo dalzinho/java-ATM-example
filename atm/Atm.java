@@ -45,13 +45,17 @@ public void fillUp(){
   this.cashReserve = 1000;
 }
 
-// public void newSession(customer){
-//   console.display("Please enter your PIN:");    
-//   if (console.getPIN(); == customer.getPIN()){
-    
-//   }
+public boolean checkPin(Customer customer, int pin){
+  return customer.getPin() == pin;
+}
 
-// }
+public void newSession(Customer customer, Console console){
+  console.display("Please enter your PIN:");    
+  if (console.getPIN() == customer.getPin()){
+    console.display("PIN Correct!");
+  }
+
+}
 
 
 }
