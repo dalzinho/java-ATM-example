@@ -52,7 +52,7 @@ public String requestPin(Console console){
 }
 
 public boolean checkPin(Customer customer, String enteredPin){
-  return customer.getPin() == enteredPin;
+  return customer.getPin().equals(enteredPin);
 }
 
 public int requestCash(Console console){

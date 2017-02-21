@@ -11,7 +11,7 @@ public class Customer{
     this.wallet = 0;
     this.name = name;
     this.account = account;
-    this.pin = "A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ=";
+    this.pin = "2/9TQaytXipY2079XnLi2aCoQ6KOArEYPGgWLQo6PeY=";
   }
 
   public int getCashInWallet(){

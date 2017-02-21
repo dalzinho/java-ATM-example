@@ -8,7 +8,6 @@ import java.security.NoSuchAlgorithmException;
 public class Console {
 
   Scanner sc;
-  MessageDigest md;
   String hash;
 
   public void display(String text){
@@ -20,18 +19,23 @@ public class Console {
     String stringPin = sc.nextLine();
 
     try {
-    md = MessageDigest.getInstance("SHA-256");
-    md.update(stringPin.getBytes());
-    hash = new sun.misc.BASE64Encoder().encode(md.digest());
+      MessageDigest md = MessageDigest.getInstance("SHA-256");
+      md.update(stringPin.getBytes());
+    //thanks to http://www.java2s.com/Code/Java/Security/EncryptpasswordbyusingSHA256algorithmencryptedPasswordlengthis32bits.htm
+    //for the bit below!
+      hash = new sun.misc.BASE64Encoder().encode(md.digest());
 
-      }
-      catch(NoSuchAlgorithmException ex){
-        System.out.println("HVISHJSHFJKHFJK");
-      }
+    }
+    catch(NoSuchAlgorithmException ex){
+      System.out.println("HVISHJSHFJKHFJK");
+    }
     //these lines might need to be commented out while attempting to create hash from the input
     // int intPin = Integer.parseInt(stringPin);
     // return intPin;
-      return hash;
+    
+ // this bit was so i could see the hash to store it
+      // System.out.println(hash);
+    return hash;
   }
 
   public int cashRequest(){
