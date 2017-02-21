@@ -2,12 +2,15 @@ package atm;
 
 public class Account{
 
-  private Customer owner;
   private int balance;
 
-  public Account(Customer owner, int balance){
-    this.owner = owner;
-    this.balance = balance;
+  public Account(int startingBalance){
+
+    this.balance = startingBalance;
   }
-  
+
+  public int getBalance(){
+    return this.balance;
+  }
+
 }
