@@ -25,9 +25,32 @@ public class AtmTest{
 
   @Test
   public void canFillUpATM(){
-    atm.giveCash(500);
-    assertEquals(500, atm.getcashReserve());
+    atm.giveCash(250);
+    assertEquals(750, atm.getcashReserve());
     atm.fillUp();
     assertEquals(1000, atm.getcashReserve());
+  }
+
+  @Test 
+  public void testIsWithinMaxIssue(){
+    assertEquals(true, atm.isWithinMaxIssue(250));
+    assertEquals(false, atm.isWithinMaxIssue(260));
+  }
+
+  @Test
+  public void testATMFundsAvailable(){
+    atm.giveCash(250);
+    atm.giveCash(250);
+    atm.giveCash(250);
+    atm.giveCash(200);
+    assertEquals(true, atm.isATMFundsAvailable(50));
+    assertEquals(false, atm.isATMFundsAvailable(60));
+  }
+
+  @Test
+  public void wontGiveMoreThanMaxWithdrawal(){
+
+    assertEquals(250, atm.giveCash(250));
+    assertEquals(0, atm.giveCash(260));
   }
 }
