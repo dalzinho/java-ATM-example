@@ -54,6 +54,11 @@ public boolean checkPin(Customer customer, int enteredPin){
   return customer.getPin() == enteredPin;
 }
 
+public int requestCash(Console console){
+  console.display("How much would you like to withdraw?");
+  return console.cashRequest();
+}
+
 public void newSession(Customer customer, Console console){
   boolean pinCorrect = false;
 
@@ -64,6 +69,10 @@ public void newSession(Customer customer, Console console){
       console.display("Correct Pin!");
     }
   }
+
+ int requestedAmount = requestCash(console);
+ customer.withdrawCash(requestedAmount, this);
+
 }
 
 }

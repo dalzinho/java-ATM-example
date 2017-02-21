@@ -63,4 +63,9 @@ public class AtmTest{
   public void checkPinReturnsValidResponse(){
     assertEquals(true, atm.checkPin(customer, 1234));
   }
+
+  // @Test
+  // public void requestCashReturnsInt(){
+  //   assertEquals(100, atm.requestCash(100))
+  // }
 }

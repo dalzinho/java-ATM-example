@@ -17,4 +17,11 @@ public class Console {
     return intPin;
   }
 
+  public int cashRequest(){
+    sc = new Scanner(System.in);
+    String stringCashRequest = sc.nextLine();
+    int intCashRequest = Integer.parseInt(stringCashRequest);
+    return intCashRequest;
+  }
+
 }
