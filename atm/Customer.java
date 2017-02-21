@@ -1,3 +1,5 @@
+package atm;
+
 public class Customer{
 
   private int wallet;
@@ -8,6 +10,10 @@ public class Customer{
     this.wallet = 0;
     this.name = name;
     this.balance = balance;
+  }
+
+  public int getBalance(){
+    return this.balance;
   }
 
 }
