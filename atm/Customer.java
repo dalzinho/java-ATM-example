@@ -18,19 +18,32 @@ public class Customer{
     return this.wallet;
   }
 
-  public boolean withdrawCash(int amount, Atm atm){
-    boolean operationComplete;
+  public String withdrawCash(int amount, Atm atm){
+    
+    String operationState;
+
     if(getAccount().hasFunds(amount)){
-      wallet += atm.giveCash(amount);
-      this.account.deduct(amount);
-      operationComplete = true;
-    }
+
+      int returnedCash = atm.giveCash(amount);
+
+      if(returnedCash > 0){
+        wallet += atm.giveCash(amount);
+        this.account.deduct(amount);
+        operationComplete = true;
+      }
+      else {
+        operationComplete = false;
+      }
+    
     else{
       operationComplete = false;
     }
-    return operationComplete;
+   
     //else add console message 
-  }
+}  
+  return operationComplete;
+}
+
 
   public Account getAccount(){
     return this.account;

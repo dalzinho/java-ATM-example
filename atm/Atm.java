@@ -70,9 +70,14 @@ public void newSession(Customer customer, Console console){
     }
   }
 
- int requestedAmount = requestCash(console);
- customer.withdrawCash(requestedAmount, this);
- 
+  int requestedAmount = requestCash(console);
+  if(customer.withdrawCash(requestedAmount, this)){
+    console.display("Please wait. Your cash is being counted.");
+  }
+  else{
+    console.display("Unable to proceed.");
+  }
+
 
 }
 
