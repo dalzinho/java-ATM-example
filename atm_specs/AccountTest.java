@@ -20,4 +20,10 @@ public class AccountTest{
   public void canGetBalance(){
     assertEquals(1000, account.getBalance());
   }
+
+  @Test
+  public void canDeductFromBalance(){
+    account.deduct(100);
+    assertEquals(900, account.getBalance());
+  }
 }

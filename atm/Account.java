@@ -13,4 +13,8 @@ public class Account{
     return this.balance;
   }
 
+  public void deduct(int amount){
+    this.balance -= amount;
+  }
+
 }
