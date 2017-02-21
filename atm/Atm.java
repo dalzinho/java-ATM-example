@@ -36,6 +36,7 @@ public class Atm{
    }
    else {
     result = 0;
+    // return something to console from here?
   }
   return result;
 }
