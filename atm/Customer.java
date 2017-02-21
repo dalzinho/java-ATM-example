@@ -20,4 +20,9 @@ public class Customer{
     return this.wallet;
   }
 
+  public void withdrawCash(int amount, Atm atm){
+    wallet += atm.giveCash(amount);
+    balance -= amount;
+  }
+
 }
