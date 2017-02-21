@@ -1,5 +1,6 @@
 package atm;
 
+
 public class Atm{
 
   private int cashReserve;
