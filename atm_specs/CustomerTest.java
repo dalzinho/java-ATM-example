@@ -50,6 +50,6 @@ public class CustomerTest{
 
   @Test
   public void canRetrieveCorrectPin(){
-    assertEquals(1234, customer.getPin());
+    assertEquals("2/9TQaytXipY2079XnLi2aCoQ6KOArEYPGgWLQo6PeY=", customer.getPin());
   }
 }

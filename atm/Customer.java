@@ -27,7 +27,7 @@ public class Customer{
       int returnedCash = atm.giveCash(amount);
 
       if(returnedCash > 0){
-        wallet += atm.giveCash(amount);
+        wallet += returnedCash;
         this.account.deduct(amount);
         operationOutcome = "Please wait while your money is being counted.";
       }

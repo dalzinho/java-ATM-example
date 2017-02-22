@@ -61,7 +61,7 @@ public class AtmTest{
 
   @Test
   public void checkPinReturnsValidResponse(){
-    assertEquals(true, atm.checkPin(customer, "A6xnQhbz4Vx2HuGl4lXwZ5U2I8iziLRFnhP5eNfIRvQ="));
+    assertEquals(true, atm.checkPin(customer, "2/9TQaytXipY2079XnLi2aCoQ6KOArEYPGgWLQo6PeY="));
   }
 
   // @Test
