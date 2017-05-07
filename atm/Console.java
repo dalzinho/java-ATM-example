@@ -34,7 +34,7 @@ public class Console {
     // return intPin;
     
  // this bit was so i could see the hash to store it
-      // System.out.println(hash);
+      System.out.println(hash);
     return hash;
   }
 
